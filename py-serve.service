@@ -5,7 +5,7 @@ Description=1Droid Weather meddleware provider
 Restart=always
 User=root
 WorkingDirectory=/home/www
-ExecStart=/usr/bin/python3 -m server > logs/server.log
+ExecStart=/usr/bin/python3 -m -u server > logs/server.log
 
 [Install]
 WantedBy=multi-user.target
