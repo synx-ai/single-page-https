@@ -5,5 +5,5 @@ python:
 install:
   - pip install nose requests
 script:
-  - python -m server.py
+  - python -m server.py --port=8443
   - nosetests --verbosity=2 test
