@@ -4,11 +4,14 @@ dist: xenial
 language: python
 python:
   - '3.8'
+  - '3.7'
+  - '3.6'
+  - '3.5'
   - '3.4'
 install:
   - pip install nose requests
 before_script:
-  - nohup python -m server --port=8443 &
+  - nohup python -m server --port 8443 &
   - sleep 2
 script:
   - nosetests --verbosity=2
