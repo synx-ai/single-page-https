@@ -5,5 +5,5 @@ python:
 install:
   - pip install nose requests
 script:
-  - server
-  - test/test
+  - python -m server.py
+  - nosetests --verbosity=2 project
