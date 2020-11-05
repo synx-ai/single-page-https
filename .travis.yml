@@ -2,3 +2,8 @@ language: python
 python:
   - '3.8'
   - '3.4'
+install:
+  - pip install nose requests
+script:
+  - server
+  - test/test
