@@ -1,9 +1,14 @@
+os:
+  - linux
+dist: xenial
 language: python
 python:
   - '3.8'
   - '3.4'
 install:
   - pip install nose requests
-script:
+before_script:
   - python -m server --port=8443
-  - nosetests --verbosity=2 test
+  - sleep 2
+script:
+  - nosetests --verbosity=2

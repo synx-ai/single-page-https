@@ -3,6 +3,7 @@ import getopt
 import http.server
 import ssl
 
+
 def main(argv):
     try:
         opts, args = getopt.getopt(argv, "p:", ["port="])
@@ -15,7 +16,8 @@ def main(argv):
         port = 443
 
     server_address = ('0.0.0.0', port)
-    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd = http.server.HTTPServer(
+        server_address, http.server.SimpleHTTPRequestHandler)
 
     # assume production
     if port == 443:
