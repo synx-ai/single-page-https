@@ -31,7 +31,7 @@ service pyserve stop
 service pyserve start
 ```
 
-Change default certfile and keyfile paths on `server.py` or specify them as parameters. 
+Change default certfile and keyfile paths on `server.py` or specify them as parameters.
 
 Install hooks to reload server on cert updates:
 
@@ -58,6 +58,22 @@ optional arguments:
   -k KEYFILE, --keyfile KEYFILE
                         SSL Keyfile
 ```
+
+
+### Logs
+
+Use system logs to review status and logs.
+
+For status:
+```shell
+systemctl -l status pyserve
+```
+
+For logs:
+```shell
+journalctl -u pyserve.service -e
+```
+
 
 ### Author
 
