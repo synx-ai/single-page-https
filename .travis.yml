@@ -11,6 +11,6 @@ install:
   - nohup python -m server --port 8443 &
   - sleep 2
 script:
-  - nosetests --verbosity=2 --with-coverage --cover-xml --cover-package=server.py
+  - nosetests --verbosity=2 --with-coverage --cover-erase --cover-xml --cover-package=server
 after_success:
   - bash <(curl -s https://codecov.io/bash)

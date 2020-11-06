@@ -1,5 +1,7 @@
 import requests
+import server
 from nose.tools import assert_true
+
 
 
 def test_request_response():
