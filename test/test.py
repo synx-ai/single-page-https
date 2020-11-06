@@ -1,7 +1,6 @@
 import requests
 import server
-from nose.tools import assert_true
-
+from nose.tools import assert_true, assert_raises
 
 
 def test_request_response():
@@ -10,3 +9,9 @@ def test_request_response():
 
     # Confirm that the request-response cycle completed successfully.
     assert_true(response.ok)
+
+
+def test_import_server_init():
+    resp = server.init()
+
+    assert_true(resp == None)
