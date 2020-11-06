@@ -6,12 +6,11 @@ python:
   - '3.8'
   - '3.7'
   - '3.6'
-  - '3.5'
-  - '3.4'
 install:
-  - pip install nose requests
-before_script:
+  - pip install nose requests coverage
   - nohup python -m server --port 8443 &
   - sleep 2
 script:
-  - nosetests --verbosity=2
+  - nosetests --verbosity=2 --with-coverage --cover-xml --cover-package=server.py
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -1,5 +1,5 @@
 # Single HTTPS enabled page serve using Python
-[![Build Status](https://travis-ci.com/synx-ai/single-page-https.svg?branch=master)](https://travis-ci.com/synx-ai/single-page-https)
+[![Build Status](https://travis-ci.com/synx-ai/single-page-https.svg?branch=master)](https://travis-ci.com/synx-ai/single-page-https) [![codecov](https://codecov.io/gh/synx-ai/single-page-https/branch/master/graph/badge.svg?token=C99FGEZOI7)](https://codecov.io/gh/synx-ai/single-page-https)
 
 The main purpuse of this project is to provide a simplistic way with a minimal installation to serve static content for microservices reporting and content testing. **Not intended for production**.
 
